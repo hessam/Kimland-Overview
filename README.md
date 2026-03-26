@@ -209,10 +209,10 @@ The application runs in Docker with Nginx handling SSL termination, reverse prox
 # /etc/nginx/sites-available/kimland
 server {
     listen 443 ssl http2;
-    server_name api.yourdomain.com;
+    server_name api.kimland.store;
 
-    ssl_certificate     /etc/letsencrypt/live/api.yourdomain.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/api.yourdomain.com/privkey.pem;
+    ssl_certificate     /etc/letsencrypt/live/api.kimland.store/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/api.kimland.store/privkey.pem;
 
     # Rate limiting at Nginx level — before Node even sees the request
     limit_req zone=api_limit burst=20 nodelay;
